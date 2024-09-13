@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3x+1</title>
+    <meta name="description" content="Try out The Collatz Conjecture!">
+    <meta property="og:url" content="https://praashoo7.github.io/Collatz-Conjecture/"/>
+    <meta property="og:image" content="https://praashoo7.github.io/Collatz-Conjecture/imgs/ReadMe-Images/OGImg.png"/>
+    <meta property="og:description" content="Try out The Collatz Conjecture!"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:alt" content="Collatz-Conjecture Banner">
+    <meta name="twitter:url" content="https://praashoo7.github.io/Collatz-Conjecture/"/>
+    <meta name="twitter:title" content="Collatz-Conjecture"/>
+    <meta name="twitter:description" content="Try out The Collatz Conjecture!"/>
+    <meta name="twitter:image" content="https://praashoo7.github.io/Collatz-Conjecture/imgs/ReadMe-Images/OGImg.png"/>
+    <meta name="description" content="Try out The Collatz Conjecture!"/>
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/hierarchy.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="mainIcon.svg">
+</head>
+<body>
+
+    <div class="topBarMobile">
+        <h1>
+            3x+1
+            <button onclick="openHelp()">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><circle cx="12" cy="12" r="9" stroke="#292929" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></circle><rect height="0.01" stroke="#292929" stroke-linejoin="round" stroke-width="3" width="0.01" x="12" y="16"></rect><path d="M10.5858 7.58572C10.9754 7.1961 11.4858 7.00083 11.9965 6.99994C12.5095 6.99904 13.0228 7.1943 13.4142 7.58572C13.8047 7.97625 14 8.48809 14 8.99994C14 9.51178 13.8047 10.0236 13.4142 10.4141C13.0228 10.8056 12.5095 11.0008 11.9965 10.9999L12 11.9999" stroke="#292929" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></g></svg>
+            </button>
+        </h1>
+    </div>
+    <div class="topBar">
+        <div class="dataInput">
+            <label class="label">
+                <input type="number" id="inputData" min="0" class="input" placeholder="Enter any Number" autocomplete="off"/>
+            </label>
+            <button class="submitBtn" onclick="doit()" id="submit">Submit</button>
+        </div>
+        <h1>
+            3x+1
+            <button onclick="openHelp()">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><circle cx="12" cy="12" r="9" stroke="#292929" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></circle><rect height="0.01" stroke="#292929" stroke-linejoin="round" stroke-width="3" width="0.01" x="12" y="16"></rect><path d="M10.5858 7.58572C10.9754 7.1961 11.4858 7.00083 11.9965 6.99994C12.5095 6.99904 13.0228 7.1943 13.4142 7.58572C13.8047 7.97625 14 8.48809 14 8.99994C14 9.51178 13.8047 10.0236 13.4142 10.4141C13.0228 10.8056 12.5095 11.0008 11.9965 10.9999L12 11.9999" stroke="#292929" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></g></svg>
+            </button>
+        </h1>
+    </div>
+
+    <div class="data" id="data">
+        <div class="numberData" id="numberData"><span class="allNumbersText">List of All Numbers.</span></div>
+        <div class="highLow">
+            <div class="highest" id="highest">Highest Number : None</div>
+            <div class="lowest" id="lowest">Lowest Number : None</div>
+        </div>
+    </div>
+
+    <div class="chartContainer">
+        <button class="chartSwitch" id="chartSwitch">></button>
+        <div class="chartdiv" id="chartdiv"><span class="chartDisplayText" id="chartDisplayText">The Chart Will be Shown here!</span></div>
+    </div>
+
+    <div class="overlay" id="infoMain">
+        <div class="info">
+            <h1>What is 3x+1?</h1>
+            <div class="divider"></div>
+            <span>
+                The 3x + 1 conjecture is also known as the Collatz conjecture. The Collatz conjecture is one of the most famous unsolved problems in mathematics. The conjecture asks whether repeating two simple arithmetic operations will eventually transform every positive integer into 1.<br>
+                Consider the following operation on an arbitrary positive integer:
+                <li>If the number is even, divide it by two.</li>
+                <li>If the number is odd, triple it and add one.</li>
+                Adding any number ends up in the 4-2-1 loop always! Try it to see it!
+            </span>
+            <button onclick="closeHelp()" class="close" id="close">Close</button>
+        </div>
+    </div>
+
+    <div class="small_device">
+        <div class="small_device_card">
+            <div class="small_device_text">
+                Too big numbers to show on such a small Display!<br>Please switch to a bigger Display.
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script src="index.js"></script>
