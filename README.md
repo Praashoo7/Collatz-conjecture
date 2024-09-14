@@ -18,6 +18,7 @@ You can try it with a Python code too.
 
   - Fredoka font from [Google Fonts.](https://fonts.google.com/specimen/Fredoka?preview.text=At%20the%20first%20page%20choose%20a%20card%20in%20your%20mind.&query=Fredoka&stroke=Sans+Serif)
   - Icons from [SVGRepo.](https://www.svgrepo.com/)
+  - Chart from [AMCHARTS.](https://www.amcharts.com/)
 
 ## License
 
