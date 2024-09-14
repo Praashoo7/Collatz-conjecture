@@ -153,6 +153,14 @@ series.bullets.push(function () {
     });
 });
 
+// Make sure tooltips are enabled on the series
+series.setAll({
+    tooltip: am5.Tooltip.new(root, {
+        labelText: "{valueY}"
+    }),
+    tooltipY: 0
+});
+
 // Custom font for tooltip
 series.get("tooltip").label.setAll({
     fontFamily: "Fredoka"
@@ -167,6 +175,12 @@ chart.set("scrollbarX", am5.Scrollbar.new(root, {
 chart.set("scrollbarY", am5.Scrollbar.new(root, {
     orientation: "vertical"
 }));
+
+// var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
+//     behavior: "none"
+// }));
+// cursor.lineY.set("visible", true);
+// cursor.lineX.set("visible", true);
 
 series.appear(1000);
 chart.appear(1000, 100);
