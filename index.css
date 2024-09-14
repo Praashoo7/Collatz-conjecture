@@ -363,6 +363,9 @@ p:nth-last-child(1), p:nth-last-child(2), p:nth-last-child(3){
     .chartDataText{
         flex-direction: column;
     }
+    .chartContainer{
+        padding: 1em 1em 1em 1em;
+    }
 }
 @media screen and (max-width: 655px) {
     .highLow{
