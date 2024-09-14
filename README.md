@@ -10,7 +10,8 @@ Consider the following operation on an arbitrary positive integer:
   - If the number is even, divide it by two.
   - If the number is odd, triple it and add one.
 
-Adding any number ends up in the 4-2-1 loop, always! Try it to see it!<br><br>
+Adding any number ends up in the 4-2-1 loop, always! Try it to see it!<br>
+You can try it with a Python code too.
 
 
 ## Credits
