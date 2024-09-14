@@ -32,7 +32,6 @@ function doit(){
             updateGraph(data)
             break
         } else {
-            console.log("ODD : ", n)
             addOddCount = addOddCount+n
             n = n*3
             n = n+1
@@ -52,6 +51,7 @@ function doit(){
     document.getElementById('chartDataEvenText1').innerHTML = "Odd Numbers : " + oddCount
     document.getElementById('chartDataOddText2').innerHTML = "Even Numbers Added : " + addEvenCount
     document.getElementById('chartDataEvenText2').innerHTML = "Odd Numbers Added : " + addOddCount
+    data.pop()
     updateGraph(data);
 }
 
