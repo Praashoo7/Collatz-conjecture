@@ -283,7 +283,7 @@ p:nth-last-child(1), p:nth-last-child(2), p:nth-last-child(3){
     flex-direction: column;
     row-gap: 1em;
     padding: 2em;
-    margin: 1em;
+    margin: 0 1em 0 1em;
     line-height: normal;
 }
 .overlay .info h1{
@@ -312,7 +312,7 @@ p:nth-last-child(1), p:nth-last-child(2), p:nth-last-child(3){
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
-@media screen and (max-height: 550px){
+@media screen and (max-height: 610px), (max-width: 420px){
     .info{
         height: 95dvh;
         align-items: start;
@@ -342,6 +342,8 @@ p:nth-last-child(1), p:nth-last-child(2), p:nth-last-child(3){
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.7);
 }
+
+
 
 @media screen and (max-width: 655px) {
     .highLow{
