@@ -5,7 +5,7 @@
 ## How to Start?
 
 The 3x + 1 conjecture is also known as the Collatz conjecture. The Collatz conjecture is one of the most famous unsolved problems in mathematics. The conjecture asks whether repeating two simple arithmetic operations will eventually transform every positive integer into 1.<br>
-  - Consider the following operation on an arbitrary positive integer:
+Consider the following operation on an arbitrary positive integer:
   - If the number is even, divide it by two.
   - If the number is odd, triple it and add one.
 Adding any number ends up in the 4-2-1 loop always! Try it to see it!
