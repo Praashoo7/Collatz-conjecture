@@ -48,10 +48,10 @@ function doit(){
         document.getElementById('highest').innerHTML = "Highest Number : " + maximum
         document.getElementById('lowest').innerHTML = "Lowest Number : " + minimum
     }
-    document.getElementById('chartDataOddText1').innerHTML = "Total Even Numbers : " + oddCount
-    document.getElementById('chartDataEvenText1').innerHTML = "Total Odd Numbers : " + evenCount
-    document.getElementById('chartDataOddText2').innerHTML = "Total Even Numbers Added : " + addOddCount
-    document.getElementById('chartDataEvenText2').innerHTML = "Total Odd Numbers Added : " + addEvenCount
+    document.getElementById('chartDataOddText1').innerHTML = "Even Numbers : " + oddCount
+    document.getElementById('chartDataEvenText1').innerHTML = "Odd Numbers : " + evenCount
+    document.getElementById('chartDataOddText2').innerHTML = "Even Numbers Added : " + addOddCount
+    document.getElementById('chartDataEvenText2').innerHTML = "Odd Numbers Added : " + addEvenCount
     updateGraph(data);
 }
 
