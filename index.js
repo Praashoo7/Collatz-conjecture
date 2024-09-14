@@ -212,9 +212,11 @@ function updateGraph(data){
 function openHelp(){
     document.getElementById('infoMain').style.opacity = 1
     document.getElementById('infoMain').style.zIndex = 9999
+    document.body.style.overflow = 'hidden'
 }
 
 function closeHelp(){
     document.getElementById('infoMain').style.opacity = 0
     document.getElementById('infoMain').style.zIndex = -2
+    document.body.style.overflow = ''
 }
