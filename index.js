@@ -25,6 +25,7 @@ function doit(){
             data.push(n)
             evenCount=evenCount+1
         } else if(n==1) {
+            addOddCount = addOddCount+n
             data.push(n)
             n=0
             document.getElementById('chartDisplayText').style.opacity = 0;
@@ -47,10 +48,10 @@ function doit(){
         document.getElementById('highest').innerHTML = "Highest Number : " + maximum
         document.getElementById('lowest').innerHTML = "Lowest Number : " + minimum
     }
-    document.getElementById('chartDataOddText1').innerHTML = "Even Numbers : " + oddCount
-    document.getElementById('chartDataEvenText1').innerHTML = "Odd Numbers : " + evenCount
-    document.getElementById('chartDataOddText2').innerHTML = "Even Numbers Added : " + addOddCount
-    document.getElementById('chartDataEvenText2').innerHTML = "Odd Numbers Added : " + addEvenCount
+    document.getElementById('chartDataOddText1').innerHTML = "Even Numbers : " + evenCount
+    document.getElementById('chartDataEvenText1').innerHTML = "Odd Numbers : " + oddCount
+    document.getElementById('chartDataOddText2').innerHTML = "Even Numbers Added : " + addEvenCount
+    document.getElementById('chartDataEvenText2').innerHTML = "Odd Numbers Added : " + addOddCount
     updateGraph(data);
 }
 
