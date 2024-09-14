@@ -14,11 +14,17 @@ document.addEventListener('keydown', function(event) {
 function doit(){
     let n = parseInt(document.getElementById('inputData').value)
     let data = []
+    let evenCount = 0
+    let oddCount= 0
+    let addEvenCount = 0
+    let addOddCount = 0
 
     while(n!=0 && n){
         if(n%2==0){
+            addEvenCount = addEvenCount+n
             n=n/2
             data.push(n)
+            evenCount=evenCount+1
         } else if(n==1) {
             data.push(n)
             n=0
@@ -26,9 +32,12 @@ function doit(){
             updateGraph(data)
             break
         } else {
+            console.log("ODD : ", n)
+            addOddCount = addOddCount+n
             n = n*3
             n = n+1
             data.push(n)
+            oddCount=oddCount+1
         }
         const dataWrite = data.map((value) => {
             return `<p>${value}</p>`
@@ -39,6 +48,10 @@ function doit(){
         document.getElementById('highest').innerHTML = "Highest Number : " + maximum
         document.getElementById('lowest').innerHTML = "Lowest Number : " + minimum
     }
+    document.getElementById('chartDataOddText1').innerHTML = "Total Even Numbers : " + oddCount
+    document.getElementById('chartDataEvenText1').innerHTML = "Total Odd Numbers : " + evenCount
+    document.getElementById('chartDataOddText2').innerHTML = "Total Even Numbers Added : " + addOddCount
+    document.getElementById('chartDataEvenText2').innerHTML = "Total Odd Numbers Added : " + addEvenCount
     updateGraph(data);
 }
 
