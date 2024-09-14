@@ -1,4 +1,4 @@
-# [Collatz-Conjecture](https://praashoo7.github.io/Collatz-Conjecture/)
+# [Collatz-Conjecture[3x+1]](https://praashoo7.github.io/Collatz-Conjecture/)
 
 ![Readme Image](imgs/ReadMe-Images/MAIN.png)
 
