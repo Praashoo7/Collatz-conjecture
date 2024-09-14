@@ -427,6 +427,7 @@ p:nth-last-child(1), p:nth-last-child(2), p:nth-last-child(3){
     body{
       margin: 0;
       padding: 0;
+      height: 100dvh;
     }
     .small_device{
         display: flex;
