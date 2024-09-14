@@ -8,7 +8,7 @@ The 3x + 1 conjecture is also known as the Collatz conjecture. The Collatz conje
 
 Consider the following operation on an arbitrary positive integer:
   - If the number is even, divide it by two.
-  - If the number is odd, triple it and add one.<br><br>
+  - If the number is odd, triple it and add one.
 
 Adding any number ends up in the 4-2-1 loop always! Try it to see it!
 
