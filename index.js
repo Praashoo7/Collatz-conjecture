@@ -18,26 +18,45 @@ function doit(){
     let addEvenCount = 0
     let addOddCount = 0
 
-    while(n!=0 && n){
-        if(n%2==0){
-            addEvenCount = addEvenCount+n
-            n=n/2
-            data.push(n)
-            evenCount=evenCount+1
-        } else if(n==1) {
-            addOddCount = addOddCount+n
-            data.push(n)
-            n=0
-            document.getElementById('chartDisplayText').style.opacity = 0;
-            updateGraph(data)
-            break
-        } else {
-            addOddCount = addOddCount+n
-            n = n*3
-            n = n+1
-            data.push(n)
-            oddCount=oddCount+1
+    if(n!=1){
+        while(n!=0 && n){
+            if(n%2==0){
+                addEvenCount = addEvenCount+n
+                n=n/2
+                data.push(n)
+                evenCount=evenCount+1
+            } else if(n==1) {
+                addOddCount = addOddCount+n
+                data.push(n)
+                n=0
+                document.getElementById('chartDisplayText').style.opacity = 0;
+                updateGraph(data)
+                break
+            } else {
+                addOddCount = addOddCount+n
+                n = n*3
+                n = n+1
+                data.push(n)
+                oddCount=oddCount+1
+            }
+            const dataWrite = data.map((value) => {
+                return `<p>${value}</p>`
+            })
+            let maximum = Math.max(...data);
+            let minimum = Math.min(...data);
+            document.getElementById('numberData').innerHTML = dataWrite.join(" ")
+            document.getElementById('highest').innerHTML = "Highest Number : " + maximum
+            document.getElementById('lowest').innerHTML = "Lowest Number : " + minimum
         }
+        document.getElementById('chartDataOddText1').innerHTML = "Even Numbers : " + evenCount
+        document.getElementById('chartDataEvenText1').innerHTML = "Odd Numbers : " + oddCount
+        document.getElementById('chartDataOddText2').innerHTML = "Even Numbers Added : " + addEvenCount
+        document.getElementById('chartDataEvenText2').innerHTML = "Odd Numbers Added : " + addOddCount
+        data.pop()
+        updateGraph(data);
+    } else {
+        data= [4,2,1]
+        document.getElementById('chartDisplayText').style.opacity = 0;
         const dataWrite = data.map((value) => {
             return `<p>${value}</p>`
         })
@@ -46,13 +65,12 @@ function doit(){
         document.getElementById('numberData').innerHTML = dataWrite.join(" ")
         document.getElementById('highest').innerHTML = "Highest Number : " + maximum
         document.getElementById('lowest').innerHTML = "Lowest Number : " + minimum
+        document.getElementById('chartDataOddText1').innerHTML = "Even Numbers : " + "2"
+        document.getElementById('chartDataEvenText1').innerHTML = "Odd Numbers : " + "1"
+        document.getElementById('chartDataOddText2').innerHTML = "Even Numbers Added : " + "6"
+        document.getElementById('chartDataEvenText2').innerHTML = "Odd Numbers Added : " + "1"
+        updateGraph(data);
     }
-    document.getElementById('chartDataOddText1').innerHTML = "Even Numbers : " + evenCount
-    document.getElementById('chartDataEvenText1').innerHTML = "Odd Numbers : " + oddCount
-    document.getElementById('chartDataOddText2').innerHTML = "Even Numbers Added : " + addEvenCount
-    document.getElementById('chartDataEvenText2').innerHTML = "Odd Numbers Added : " + addOddCount
-    data.pop()
-    updateGraph(data);
 }
 
 function createChart() {
