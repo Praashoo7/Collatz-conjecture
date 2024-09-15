@@ -326,7 +326,7 @@ p:nth-last-child(1), p:nth-last-child(2), p:nth-last-child(3){
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
-@media screen and (max-height: 610px), (max-width: 420px){
+@media screen and (max-height: 620px), (max-width: 420px){
     .info{
         height: 95dvh;
         align-items: start;
