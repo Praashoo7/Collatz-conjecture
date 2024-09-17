@@ -256,9 +256,8 @@ p:nth-last-child(1), p:nth-last-child(2), p:nth-last-child(3){
 }
 .chartDisplayText{
     position: absolute;
-    bottom: -5%;
+    bottom: -4%;
     height: 100%;
-    padding-right: 2em;
     transition: all 0.2s ease-in-out;
 }
 
@@ -365,6 +364,10 @@ p:nth-last-child(1), p:nth-last-child(2), p:nth-last-child(3){
     }
     .chartContainer{
         padding: 1em 1em 1em 1em;
+    }
+    .chartDisplayText{
+        padding-left: 0.75em;
+        bottom: -3%;
     }
 }
 @media screen and (max-width: 655px) {
